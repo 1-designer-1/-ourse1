@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Сourse1", "Сourse1\Сourse1.csproj", "{3F857EB7-BDEF-41DA-BC9F-24FC889B3D2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestMemory", "TestMemory\TestMemory.csproj", "{31976A5C-1EDE-465E-92FA-B3B42FFA51A8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3F857EB7-BDEF-41DA-BC9F-24FC889B3D2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F857EB7-BDEF-41DA-BC9F-24FC889B3D2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F857EB7-BDEF-41DA-BC9F-24FC889B3D2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F857EB7-BDEF-41DA-BC9F-24FC889B3D2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31976A5C-1EDE-465E-92FA-B3B42FFA51A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31976A5C-1EDE-465E-92FA-B3B42FFA51A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31976A5C-1EDE-465E-92FA-B3B42FFA51A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31976A5C-1EDE-465E-92FA-B3B42FFA51A8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {40C91AB0-354B-410C-B5DF-63A3DA34BEEF}
+	EndGlobalSection
+EndGlobal
