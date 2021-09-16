@@ -8,20 +8,25 @@ namespace TestMemory
 {
     public class Class1
     {
-        public int RadomNumberArray(int oneRandomNumber, int twoRandomNumber)
+        public int[] RadomNumberArray(int numeral)//переделать в void
         {
             Random random = new Random();
+            int koll = 0;
+            int[] Array = new int[numeral];
+            for (int i = 0; i < Array.Length; i++)
+            {
+                Array[i] = random.Next(0, 1000);
+                koll++;
+            }
 
-            int[] array = new int[0];
-            
+            return Array;
 
-
-
-
-
-            return 0;
         }
-                            
+
+        public int Examination(int[] ArrayUser, int[] ArrayRandom)
+        {
+
+        }
 
 
 
