@@ -8,22 +8,41 @@ namespace TestMemory
 {
     public class Class1
     {
-        public void RadomNumberArray(int numeral, out int[] Array, out int koll)
+        /// <summary>
+        /// Массив с случайными значениями для теста
+        /// </summary>
+        /// <param name="numeral">Количкство чисел в тесте</param>
+        /// <param name="array">Вывод массива с числами</param>
+        /// <param name="koll">Вывод количества показаных чисел</param>
+        public void RadomNumberArray(int numeral, out int[] array, out int koll)
         {
             Random random = new Random();
             koll = 0;
-            Array = new int[numeral];
-            for (int i = 0; i < Array.Length; i++)
+            array = new int[numeral];
+            for (int i = 0; i < array.Length; i++)
             {
-                Array[i] = random.Next(0, 1000);
+                array[i] = random.Next(0, 1000);
                 koll++;
             }
 
         }
 
-        //public int Examination(int[] ArrayUser, int[] ArrayRandom)
-        //{
+        public int Examination(int[] userResponse, int[] arrayRandom) // сравнение 
+        {
 
+            int coll = 0;
+            for (int i = 0; i < userResponse.Length; i++)
+            {
+                if (userResponse[i] == arrayRandom[i]) coll++;
+            }
+
+            return coll;
+
+        }
+        //private IEnumerable dfgdgfd()
+        //{
+        //    RadomNumberArray();
+        //    yield return new wait
         //}
 
 
