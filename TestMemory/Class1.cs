@@ -31,6 +31,7 @@ namespace TestMemory
         {
 
             int coll = 0;
+
             for (int i = 0; i < userResponse.Length; i++)
             {
                 if (userResponse[i] == arrayRandom[i]) coll++;
