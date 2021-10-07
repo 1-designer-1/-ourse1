@@ -16,5 +16,28 @@ namespace Сourse1
         {
             InitializeComponent();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Info info = new Info();
+            info.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Options options = new Options();
+            options.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Test test = new Test();
+            test.ShowDialog();
+        }
     }
 }

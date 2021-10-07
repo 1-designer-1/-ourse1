@@ -1,7 +1,7 @@
 ﻿
 namespace Сourse1
 {
-    partial class Exit
+    partial class Rezult
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,17 @@ namespace Сourse1
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // Rezult
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Exit";
+            this.ClientSize = new System.Drawing.Size(637, 332);
+            this.Name = "Rezult";
+            this.Text = "Rezult";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

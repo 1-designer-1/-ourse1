@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Сourse1
 {
-    public partial class Exit : Form
+    public partial class Rezult : Form
     {
-        public Exit()
+        public Rezult()
         {
             InitializeComponent();
         }

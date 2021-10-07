@@ -27,11 +27,16 @@ namespace TestMemory
 
         }
 
-        public int Examination(int[] userResponse, int[] arrayRandom) // сравнение 
+        /// <summary>
+        /// Сравнение 
+        /// </summary>
+        /// <param name="userResponse"></param>
+        /// <param name="arrayRandom"></param>
+        /// <returns></returns>
+        public int Examination(int[] userResponse, int[] arrayRandom) 
         {
 
             int coll = 0;
-
             for (int i = 0; i < userResponse.Length; i++)
             {
                 if (userResponse[i] == arrayRandom[i]) coll++;
@@ -40,6 +45,10 @@ namespace TestMemory
             return coll;
 
         }
+
+
+
+
         //private IEnumerable dfgdgfd()
         //{
         //    RadomNumberArray();
