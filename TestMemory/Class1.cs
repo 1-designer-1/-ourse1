@@ -9,6 +9,17 @@ namespace TestMemory
     public class Class1
     {
         /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public int RadomNumber()
+        {
+            Random random = new Random();
+            int number = random.Next(10, 25);
+            return number;
+        }
+
+        /// <summary>
         /// Массив с случайными значениями для теста
         /// </summary>
         /// <param name="numeral">Количкство чисел в тесте</param>
