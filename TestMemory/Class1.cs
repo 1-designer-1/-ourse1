@@ -53,6 +53,7 @@ namespace TestMemory
             {
                 if (userResponse[i] == arrayRandom[i]) coll++;
             }
+            // contains c# сравнивание 
 
             return coll;
 

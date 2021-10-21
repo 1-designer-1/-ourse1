@@ -53,7 +53,7 @@ namespace Сourse1
             // 
             this.groupBox2.Location = new System.Drawing.Point(224, 29);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(292, 481);
+            this.groupBox2.Size = new System.Drawing.Size(292, 231);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
@@ -86,10 +86,11 @@ namespace Сourse1
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(609, 592);
+            this.ClientSize = new System.Drawing.Size(535, 592);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Test";
+            this.ShowIcon = false;
             this.Text = "Test";
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
