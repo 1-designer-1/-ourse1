@@ -16,5 +16,10 @@ namespace Сourse1
         {
             InitializeComponent();
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            //будет проходить удаления чмсел с таблицы 
+        }
     }
 }
