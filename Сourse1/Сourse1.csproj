@@ -112,5 +112,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TestMemory\TestMemory.csproj">
+      <Project>{31976a5c-1ede-465e-92fa-b3b42ffa51a8}</Project>
+      <Name>TestMemory</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -9,13 +9,13 @@ namespace TestMemory
     public class Class1
     {
         /// <summary>
-        /// 
+        /// Количество чисел в тесте
         /// </summary>
         /// <returns></returns>
         public int RadomNumber()
         {
             Random random = new Random();
-            int number = random.Next(10, 25);
+            int number = random.Next(5, 20);
             return number;
         }
 
@@ -35,6 +35,7 @@ namespace TestMemory
                 array[i] = random.Next(0, 1000);
                 koll++;
             }
+            array.Distinct().ToArray();
 
         }
 

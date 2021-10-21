@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TestMemory;
 
 namespace Сourse1
 {
     public partial class Test : Form
     {
+        Class1 Class1 = new Class1();
         public Test()
         {
             InitializeComponent();
@@ -19,7 +21,19 @@ namespace Сourse1
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            //будет проходить удаления чмсел с таблицы 
+            listBox1.Items.Clear();// для теста
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Class1.RadomNumberArray(Class1.RadomNumber(), out int[] array, out int coll);
+            for (int i = 0; i < array.Length; i++)
+            {
+                listBox1.Items.Add(array[i].ToString());
+            }
+            timer1.Enabled = true;//запуск таймера
+            button1.Enabled = false;//чтобы пользователь не мог посмотреть числа еще раз
+           
         }
     }
 }
