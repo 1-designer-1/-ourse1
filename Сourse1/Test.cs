@@ -35,5 +35,13 @@ namespace Сourse1
             button1.Enabled = false;//чтобы пользователь не мог посмотреть числа еще раз
            
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            List<int> Array = new List<int>();
+            Array.Add(Convert.ToInt32(textBox1.Text));
+            textBox1.Clear();
+            textBox1.Focus();
+        }
     }
 }
