@@ -14,6 +14,7 @@ namespace Сourse1
     public partial class Test : Form
     {
         Class1 Class1 = new Class1();
+        List<int> Array = new List<int>();
         public Test()
         {
             InitializeComponent();
@@ -26,22 +27,42 @@ namespace Сourse1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Class1.RadomNumberArray(Class1.RadomNumber(), out int[] array, out int coll);
+            Class1.RadomNumberArray(Class1.RadomNumber(), out int[] array);
             for (int i = 0; i < array.Length; i++)
             {
                 listBox1.Items.Add(array[i].ToString());
+
             }
             timer1.Enabled = true;//запуск таймера
             button1.Enabled = false;//чтобы пользователь не мог посмотреть числа еще раз
-           
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            List<int> Array = new List<int>();
-            Array.Add(Convert.ToInt32(textBox1.Text));
-            textBox1.Clear();
-            textBox1.Focus();
+            try
+            {
+                Array.Add(Convert.ToInt32(textBox1.Text));
+                textBox1.Clear();
+                textBox1.Focus();
+                //int[] array = Array.ToArray();
+                //timer1.Enabled = false;
+                //for (int i = 0; i < array.Length; i++)
+                //{
+                //    listBox1.Items.Add(Convert.ToString(array[i]));
+
+                //}
+            }
+            catch (Exception ex)
+            { 
+                MessageBox.Show(ex.Message);
+            }
+
+
+
+
+
+
         }
     }
 }

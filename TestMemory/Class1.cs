@@ -15,7 +15,7 @@ namespace TestMemory
         public int RadomNumber()
         {
             Random random = new Random();
-            int number = random.Next(5, 20);
+            int number = random.Next(5, 10);
             return number;
         }
 
@@ -25,15 +25,13 @@ namespace TestMemory
         /// <param name="numeral">Количкство чисел в тесте</param>
         /// <param name="array">Вывод массива с числами</param>
         /// <param name="koll">Вывод количества показаных чисел</param>
-        public void RadomNumberArray(int numeral, out int[] array, out int koll)
+        public void RadomNumberArray(int numeral, out int[] array)
         {
             Random random = new Random();
-            koll = 0;
             array = new int[numeral];
             for (int i = 0; i < array.Length; i++)
             {
                 array[i] = random.Next(0, 1000);
-                koll++;
             }
             array.Distinct().ToArray();
 
@@ -58,6 +56,12 @@ namespace TestMemory
             return coll;
 
         }
+
+
+
+
+
+
 
 
 
