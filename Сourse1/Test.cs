@@ -14,7 +14,6 @@ namespace Сourse1
     public partial class Test : Form
     {
         Class1 Class1 = new Class1();
-        List<int> Array = new List<int>();
         public Test()
         {
             InitializeComponent();
@@ -40,18 +39,18 @@ namespace Сourse1
 
         private void button2_Click(object sender, EventArgs e)
         {
+           
             try
             {
-                Array.Add(Convert.ToInt32(textBox1.Text));
+                int[] array = Class1.userArray(Convert.ToInt32(textBox1.Text));
                 textBox1.Clear();
                 textBox1.Focus();
-                //int[] array = Array.ToArray();
-                //timer1.Enabled = false;
-                //for (int i = 0; i < array.Length; i++)
-                //{
-                //    listBox1.Items.Add(Convert.ToString(array[i]));
+                timer1.Enabled = false;
+                for (int i = 0; i < array.Length; i++)
+                {
+                    listBox1.Items.Add(Convert.ToString(array[i]));
 
-                //}
+                }
             }
             catch (Exception ex)
             { 

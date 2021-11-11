@@ -37,6 +37,21 @@ namespace TestMemory
 
         }
 
+
+        /// <summary>
+        /// Значения от пользователя
+        /// </summary>
+        /// <param name="numeral"></param>
+        public int[] userArray(int numeral)
+        {
+            List<int> Array = new List<int>();
+            Array.Add(numeral);
+            int[] array = Array.ToArray();
+            return array;
+
+        }
+
+
         /// <summary>
         /// Сравнение 
         /// </summary>
@@ -56,7 +71,6 @@ namespace TestMemory
             return coll;
 
         }
-
 
 
 
