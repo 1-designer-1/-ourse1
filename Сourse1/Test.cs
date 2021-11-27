@@ -58,7 +58,7 @@ namespace Сourse1
                 int[] Nums1 = Class1.userArray(sNum, _count1);
                 ArrayUser = Nums1.ToList();
 
-            } 
+            }  
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
