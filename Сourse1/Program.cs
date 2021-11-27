@@ -6,6 +6,13 @@ using System.Windows.Forms;
 
 namespace Сourse1
 {
+    static class Rezuit
+    {
+        public static int сollNumberRandom;
+        public static int сollNumberUser;
+        public static int сollNumberUserTrue;
+    }
+
     static class Program
     {
         /// <summary>
@@ -17,6 +24,8 @@ namespace Сourse1
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainMenu());
+
         }
+
     }
 }

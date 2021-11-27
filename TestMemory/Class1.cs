@@ -24,30 +24,34 @@ namespace TestMemory
         /// </summary>
         /// <param name="numeral">Количкство чисел в тесте</param>
         /// <param name="array">Вывод массива с числами</param>
-        /// <param name="koll">Вывод количества показаных чисел</param>
         public void RadomNumberArray(int numeral, out int[] array)
         {
             Random random = new Random();
             array = new int[numeral];
             for (int i = 0; i < array.Length; i++)
             {
-                array[i] = random.Next(0, 1000);
+                array[i] = random.Next(1, 1000);
             }
-            array.Distinct().ToArray();
+            array.Distinct();
 
         }
 
 
         /// <summary>
-        /// Значения от пользователя
+        /// Значения от пользователя 
         /// </summary>
-        /// <param name="numeral"></param>
-        public int[] userArray(int numeral)
+        /// <param name="numeral">Массив строковый</param>
+        /// <param name="countNumberArray">Кол-во чисел</param>
+        /// <returns>Массив с числами</returns>
+        public int[] userArray(string[] numeral, int countNumberArray)
         {
-            List<int> Array = new List<int>();
-            Array.Add(numeral);
-            int[] array = Array.ToArray();
-            return array;
+
+            int[] Nums = new int[countNumberArray];
+            for (int i = 0; i < countNumberArray; i++)
+            {
+                Nums[i] = int.Parse(numeral[i]);
+            }
+            return Nums;
 
         }
 
@@ -58,38 +62,29 @@ namespace TestMemory
         /// <param name="userResponse"></param>
         /// <param name="arrayRandom"></param>
         /// <returns></returns>
-        public int Examination(int[] userResponse, int[] arrayRandom) 
+        public int Examination(int[] userResponse, int[] arrayRandom)
         {
-
+            
             int coll = 0;
             for (int i = 0; i < userResponse.Length; i++)
-            {
-                if (userResponse[i] == arrayRandom[i]) coll++;
+            { 
+                
+                for (int j = 0; j < arrayRandom.Length ; j++)
+                {
+                    if (userResponse[i] == arrayRandom[j]) coll++;
+                }
+                                 
             }
-            // contains c# сравнивание 
 
-            return coll;
+           return coll ;
 
         }
 
 
 
-
-
-
-
-
-
-        //private IEnumerable dfgdgfd()
-        //{
-        //    RadomNumberArray();
-        //    yield return new wait
-        //}
-
-
-
-
-
-
     }
+
+
+
+
 }
