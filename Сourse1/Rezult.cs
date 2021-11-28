@@ -19,6 +19,18 @@ namespace Сourse1
             InitializeComponent();
             label1.Text = Convert.ToString(Rezuit.сollNumberRandom);
             label2.Text = Convert.ToString(Rezuit.сollNumberUserTrue);
+            label3.Text = Convert.ToString(Rezuit.сollNumberUser);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MainMenu mainMenu = new MainMenu();
+            mainMenu.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

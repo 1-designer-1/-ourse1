@@ -18,10 +18,8 @@ namespace Сourse1
         public Test()
         {
             InitializeComponent();
-
         }
 
-        int _count1;
         List<int> ArrayUser = new List<int>();
         List<int> ArrayRnd = new List<int>();
 
@@ -32,8 +30,8 @@ namespace Сourse1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int count = Class1.RadomNumber();
-            Class1.RadomNumberArray(count, out int[] array);
+           
+            Class1.RadomNumberArray(Class1.RadomNumber(), out int[] array);
             for (int i = 0; i < array.Length; i++)
             {
                 listBox1.Items.Add(array[i].ToString());//показ чисел пользователю
@@ -43,8 +41,6 @@ namespace Сourse1
             button1.Enabled = false;//чтобы пользователь не мог посмотреть числа еще раз
             Rezuit.сollNumberRandom = Class1.RadomNumber();// Вывод кол-ва показаных чисел в конце теста
             ArrayRnd = array.ToList();
-            _count1 = count;
-
 
         }
 
@@ -54,11 +50,11 @@ namespace Сourse1
             try
             {
                 string[] sNum = textBox1.Text.Split(' ');
-                if (_count1 > sNum.Length) { };
-                int[] Nums1 = Class1.userArray(sNum, _count1);
+                int[] Nums1 = Class1.userArray(sNum);
                 ArrayUser = Nums1.ToList();
+                Rezuit.сollNumberUser = sNum.Length;
 
-            }  
+            }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
@@ -72,11 +68,23 @@ namespace Сourse1
             int[] array1 = ArrayRnd.ToArray();
             int[] array2 = ArrayUser.ToArray();
             Rezuit.сollNumberUserTrue = Class1.Examination(array2, array1);
-            label2.Text = Convert.ToString(Rezuit.сollNumberUserTrue);
-            label1.Text = Convert.ToString(Rezuit.сollNumberRandom);
+            Rezult rezult = new Rezult();
+            rezult.ShowDialog();
+        }
 
-            //  Rezult rezult = new Rezult();
-            // rezult.ShowDialog();
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -15,7 +15,7 @@ namespace TestMemory
         public int RadomNumber()
         {
             Random random = new Random();
-            int number = random.Next(5, 10);
+            int number = random.Next(2, 10);
             return number;
         }
 
@@ -43,13 +43,13 @@ namespace TestMemory
         /// <param name="numeral">Массив строковый</param>
         /// <param name="countNumberArray">Кол-во чисел</param>
         /// <returns>Массив с числами</returns>
-        public int[] userArray(string[] numeral, int countNumberArray)
+        public int[] userArray(string[] sNumeral)
         {
-
+            int countNumberArray = sNumeral.Length;
             int[] Nums = new int[countNumberArray];
             for (int i = 0; i < countNumberArray; i++)
             {
-                Nums[i] = int.Parse(numeral[i]);
+                Nums[i] = int.Parse(sNumeral[i]);
             }
             return Nums;
 
