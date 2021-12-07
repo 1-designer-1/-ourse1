@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Сourse1
 {
-    public partial class Options : Form
+    public partial class Rules : Form
     {
-        public Options()
+        public Rules()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -117,4 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Программа заключается в том, что вам будут показаны числа в диапазоне от 1 до 1000,
+в течении 3-х секунд, которые будут показаны в таблицы. После истечения времени,
+нужно будет ввести числа в текстовое поле. Если вы ввели числа, которые запомнили, 
+вам следует нажать кнопку «Заполнить», затем «Завершить». После чего вам выведется 
+результат проверки. 
+</value>
+  </data>
 </root>

@@ -13,7 +13,7 @@ namespace Сourse1
 {
     public partial class Rezult : Form
     {
-        
+
         public Rezult()
         {
             InitializeComponent();
@@ -22,13 +22,13 @@ namespace Сourse1
             label3.Text = Convert.ToString(Rezuit.сollNumberUser);
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            MainMenu mainMenu = new MainMenu();
-            mainMenu.ShowDialog();
-        }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Rezult_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }

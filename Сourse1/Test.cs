@@ -13,15 +13,17 @@ namespace Сourse1
 {
     public partial class Test : Form
     {
-        Class1 Class1 = new Class1();
+        ClassTest Class1 = new ClassTest();
 
         public Test()
         {
             InitializeComponent();
+            groupBox2.Enabled = false;
+            button3.Enabled = false;
         }
 
-        List<int> ArrayUser = new List<int>();
-        List<int> ArrayRnd = new List<int>();
+        List<int> arrayUserList = new List<int>();
+        List<int> arrayRndList = new List<int>();
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -30,8 +32,8 @@ namespace Сourse1
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
-            Class1.RadomNumberArray(Class1.RadomNumber(), out int[] array);
+            int countRandomNumeral = Class1.RadomNumber();
+            Class1.RadomNumberArray(countRandomNumeral, out int[] array);
             for (int i = 0; i < array.Length; i++)
             {
                 listBox1.Items.Add(array[i].ToString());//показ чисел пользователю
@@ -39,8 +41,10 @@ namespace Сourse1
             }
             timer1.Enabled = true;//запуск таймера
             button1.Enabled = false;//чтобы пользователь не мог посмотреть числа еще раз
-            Rezuit.сollNumberRandom = Class1.RadomNumber();// Вывод кол-ва показаных чисел в конце теста
-            ArrayRnd = array.ToList();
+            Rezuit.сollNumberRandom = countRandomNumeral;// Вывод кол-ва показаных чисел в конце теста
+            arrayRndList = array.ToList();
+            groupBox2.Enabled = true;
+            button3.Enabled = true;
 
         }
 
@@ -49,15 +53,17 @@ namespace Сourse1
         {
             try
             {
-                string[] sNum = textBox1.Text.Split(' ');
-                int[] Nums1 = Class1.userArray(sNum);
-                ArrayUser = Nums1.ToList();
-                Rezuit.сollNumberUser = sNum.Length;
+                string[] strMassNumber = textBox1.Text.Split(' ', '/', ',', ':', ';', '-', '+', '"','?',
+                    '*', '.', '!', '@', '<', '>', '#', '$', '%', '^', '&', '=', '(', ')','{','}','[',']');
+                int[] intMassTrans = Class1.UserArray(strMassNumber);
+                arrayUserList = intMassTrans.ToList();
+                Rezuit.сollNumberUser = strMassNumber.Length;
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                textBox1.Clear();
             }
 
 
@@ -65,26 +71,11 @@ namespace Сourse1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            int[] array1 = ArrayRnd.ToArray();
-            int[] array2 = ArrayUser.ToArray();
-            Rezuit.сollNumberUserTrue = Class1.Examination(array2, array1);
+            int[] examinationArrayRnd = arrayRndList.ToArray();
+            int[] examinationArrayUser = arrayUserList.ToArray();
+            Rezuit.сollNumberUserTrue = Class1.Examination(examinationArrayUser, examinationArrayRnd);
             Rezult rezult = new Rezult();
             rezult.ShowDialog();
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }

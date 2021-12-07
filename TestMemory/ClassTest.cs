@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace TestMemory
 {
-    public class Class1
+    public class ClassTest
     {
         /// <summary>
         /// Количество чисел в тесте
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Число</returns>
         public int RadomNumber()
         {
             Random random = new Random();
-            int number = random.Next(2, 10);
+            int number = random.Next(5 , 16);
             return number;
         }
 
@@ -32,7 +32,7 @@ namespace TestMemory
             {
                 array[i] = random.Next(1, 1000);
             }
-            array.Distinct();
+            array.Distinct().ToArray();
 
         }
 
@@ -43,7 +43,7 @@ namespace TestMemory
         /// <param name="numeral">Массив строковый</param>
         /// <param name="countNumberArray">Кол-во чисел</param>
         /// <returns>Массив с числами</returns>
-        public int[] userArray(string[] sNumeral)
+        public int[] UserArray(string[] sNumeral)
         {
             int countNumberArray = sNumeral.Length;
             int[] Nums = new int[countNumberArray];
@@ -57,34 +57,29 @@ namespace TestMemory
 
 
         /// <summary>
-        /// Сравнение 
+        /// Сравнение двух массивов на наличие одинаковых значений
         /// </summary>
-        /// <param name="userResponse"></param>
-        /// <param name="arrayRandom"></param>
-        /// <returns></returns>
+        /// <param name="userResponse">Массив с числами от пользователя</param>
+        /// <param name="arrayRandom">Массив со случайными числами от компьютера</param>
+        /// <returns>Вывод количества схожих элементов</returns>
         public int Examination(int[] userResponse, int[] arrayRandom)
         {
-            
-            int coll = 0;
+
+            int count = 0;
             for (int i = 0; i < userResponse.Length; i++)
-            { 
-                
-                for (int j = 0; j < arrayRandom.Length ; j++)
+            {
+
+                for (int j = 0; j < arrayRandom.Length; j++)
                 {
-                    if (userResponse[i] == arrayRandom[j]) coll++;
+                    if (userResponse[i] == arrayRandom[j]) count++;
                 }
-                                 
+
             }
 
-           return coll ;
+            return count;
 
         }
 
-
-
     }
-
-
-
 
 }

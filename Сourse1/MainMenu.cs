@@ -30,8 +30,8 @@ namespace Сourse1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Options options = new Options();
-            options.ShowDialog();
+            Rules rl = new Rules();
+            rl.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
